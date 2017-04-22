@@ -1,5 +1,7 @@
 package ar.edu.unlam.pb2.tp1Disco;
 
+
+
 public class Disco {
 	private Double diametroMayor;
 	private Double diametroMenor;
@@ -18,7 +20,7 @@ public class Disco {
 		return perimetroExterno;
 	}
 
-	public void setPerimetroExterno(Double perimetroExterno) {
+	public void setPerimetroExterno(Double radioExterno) {
 		this.perimetroExterno = 2 * 3.14 * radioExterno;
 	}
 
@@ -26,32 +28,19 @@ public class Disco {
 		return perimetroInterno;
 	}
 
-	public void setPerimetroInterno(Double perimetroInterno) {
+	public void setPerimetroInterno(Double radioInterno) {
 		this.perimetroInterno = 2 * 3.14 * radioInterno;
 	}
 
-	public Double getDiametroMayor() {
-		return diametroMayor;
-	}
 
-	public void setDiametroMayor(Double diametroMayor) {
-		this.diametroMayor = diametroMayor;
-	}
-
-	public Double getDiametroMenor() {
-		return diametroMenor;
-	}
-
-	public void setDiametroMenor(Double diametroMenor) {
-		this.diametroMenor = diametroMenor;
-	}
 
 	public Double getRadioExterno() {
 		return radioExterno;
 	}
 
 	public void setRadioExterno(Double diametroMayor, Double diametroMenor) {
-		this.radioExterno = (diametroMayor + diametroMenor) / 2;
+		
+		this.radioExterno = ((diametroMayor - diametroMenor)+(diametroMayor+diametroMenor))/4;
 	}
 
 	public Double getRadioInterno() {
@@ -59,7 +48,9 @@ public class Disco {
 	}
 
 	public void setRadioInterno(Double diametroMayor, Double diametroMenor) {
-		this.radioInterno = (diametroMayor - diametroMenor) / 2;
+		
+		this.radioInterno = ((diametroMayor+diametroMenor)-(diametroMayor-diametroMenor))/4;
+		
 	}
 
 	public Double getSuperficie() {
@@ -67,7 +58,13 @@ public class Disco {
 	}
 
 	public void setSuperficie(Double diametroMayor, Double diametroMenor) {
-		this.superficie = 3.14 * ((diametroMayor + diametroMenor) * (diametroMayor + diametroMenor));
+		this.superficie = (3.14 *diametroMayor)-(3.14*diametroMenor);
 	}
-
-}
+	
+	
+		
+	
+	}//
+	
+	
+	
